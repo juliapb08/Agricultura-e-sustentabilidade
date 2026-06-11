@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AgroSustentável - Agricultura e Sustentabilidade">
+    <title>AgroSustentável | Agricultura e Sustentabilidade</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="AgroSustentável - Promovendo a agricultura sustentável e o respeito ao meio ambiente.">
+        <title>AgroSustentável | Agricultura e Sustentabilidade</title>
+        
+        <!-- Tailwind CSS via CDN (fácil de usar no VS Code) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+            
+            :root {
+                --primary: #4a7043;   /* Verde terra */
+                --secondary: #8a9a5b;
+                --accent: #d4a017;    /* Dourado suave */
+                --bg: #f8f4ed;       /* Bege claro */
+                --text: #3f3f3f;
+            }
+            
+            body {
+                font-family: 'Inter', system_ui, sans-serif;
+            }
+            
+            h1, h2, h3 {
+                font-family: 'Playfair Display', sans-serif;
+            }
+            
+            /* Paleta de baixo contraste (harmoniosa e suave) */
+            .hero {
+                background: linear-gradient(rgba(74, 112, 67, 0.75), rgba(74, 112, 67, 0.85)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            }
+            
+            .card {
+                transition: all 0.3s ease;
+            }
+            
+            .card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            }
+            
+            /* Acessibilidade: foco visível e claro */
+            a:focus, button:focus {
+                outline: 3px solid #d4a017;
+                outline-offset: 4px;
+            }
+            
+            /* Melhoria de usabilidade */
+            .nav-link {
+                position: relative;
+            }
+            
+            .nav-link:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background-color: #d4a017;
+                transition: width 0.3s ease;
+            }
+            
+            .nav-link:hover:after {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body class="bg-[#f8f4ed] text-[#3f3f3f] leading-relaxed">
+        
+        <!-- HEADER -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-[#4a7043] rounded-xl flex items-center justify-center text-white text-2xl">🌱</div>
+                    <h1 class="text-2xl font-bold tracking-tight">AgroSustentável</h1>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#inicio" class="nav-link">Início</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#praticas" class="nav-link">Práticas</a>
+                    <a href="#beneficios" class="nav-link">Benefícios</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </nav>
+                
+                <button onclick="toggleMenu()" 
+                        class="md:hidden text-2xl focus:outline-none"
+                        aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-4">
+                <div class="flex flex-col px-6 gap-4 text-sm font-medium">
+                    <a href="#inicio" class="py-2">Início</a>
+                    <a href="#sobre" class="py-2">Sobre</a>
+                    <a href="#praticas" class="py-2">Práticas</a>
+                    <a href="#beneficios" class="py-2">Benefícios</a>
+                    <a href="#contato" class="py-2">Contato</a>
+                </div>
+            </div>
+        </header>
+    
+        <!-- HERO -->
+        <section id="inicio" class="hero text-white py-24 md:py-32">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Agricultura que cuida do futuro
+                </h2>
+                <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-95">
+                    Promovendo práticas sustentáveis que respeitam o solo, a água e as comunidades.
+                </p>
+                <a href="#praticas" 
+                   class="inline-block bg-white text-[#4a7043] font-semibold px-10 py-4 rounded-2xl text-lg hover:bg-[#d4a017] hover:text-white transition-all">
+                    Conheça as práticas
+                </a>
+            </div>
+        </section>
+    
+        <!-- SOBRE -->
+        <section id="sobre" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-[#f0e6d2] text-[#4a7043] text-sm font-medium rounded-full mb-4">NOSSA MISSÃO</span>
+                        <h2 class="text-4xl font-bold mb-6">Agroecologia em harmonia com a natureza</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Somos uma iniciativa dedicada à promoção da <strong>agricultura sustentável</strong>. 
+                            Acreditamos que é possível produzir alimentos de forma abundante sem degradar o meio ambiente.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#8a9a5b] mt-1"></i> Preservação do solo e da biodiversidade</li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#8a9a5b] mt-1"></i> Redução do uso de agrotóxicos</li>
+                            <li class="flex gap-3"><i class="fa-solid fa-check text-[#8a9a5b] mt-1"></i> Apoio a agricultores familiares</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden shadow-xl">
+                        <img src="https://picsum.photos/id/1016/800/600" alt="Campo de agricultura sustentável com plantações diversificadas" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- PRÁTICAS -->
+        <section id="praticas" class="py-20 bg-[#f8f4ed]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Práticas Sustentáveis</h2>
+                    <p class="max-w-md mx-auto text-gray-600">Técnicas comprovadas para uma produção mais responsável</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="card bg-white p-8 rounded-3xl shadow">
+                        <div class="w-14 h-14 bg-[#e8f0e4] flex items-center justify-center text-3xl rounded-2xl mb-6">🌾</div>
+                        <h3 class="text-2xl font-semibold mb-3">Rotação de Culturas</h3>
+                        <p class="text-gray-600">Melhora a fertilidade do solo naturalmente e reduz pragas e doenças.</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="card bg-white p-8 rounded-3xl shadow">
+                        <div class="w-14 h-14 bg-[#e8f0e4] flex items-center justify-center text-3xl rounded-2xl mb-6">🌳</div>
+                        <h3 class="text-2xl font-semibold mb-3">Agrofloresta</h3>
+                        <p class="text-gray-600">Integra árvores, cultivos e animais em um sistema produtivo e biodiverso.</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="card bg-white p-8 rounded-3xl shadow">
+                        <div class="w-14 h-14 bg-[#e8f0e4] flex items-center justify-center text-3xl rounded-2xl mb-6">💧</div>
+                        <h3 class="text-2xl font-semibold mb-3">Manejo de Água</h3>
+                        <p class="text-gray-600">Captação de chuva, irrigação eficiente e conservação de recursos hídricos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- BENEFÍCIOS -->
+        <section id="beneficios" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-10">Benefícios para o planeta e para você</h2>
+                        
+                        <div class="space-y-10">
+                            <div class="flex gap-6">
+                                <div class="text-4xl">🌍</div>
+                                <div>
+                                    <h4 class="font-semibold text-xl mb-2">Meio Ambiente</h4>
+                                    <p class="text-gray-600">Redução de emissões, preservação da biodiversidade e recuperação de solos degradados.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="text-4xl">👨‍🌾</div>
+                                <div>
+                                    <h4 class="font-semibold text-xl mb-2">Agricultores</h4>
+                                    <p class="text-gray-600">Maior resiliência econômica, saúde do solo e acesso a mercados premium.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="text-4xl">🍎</div>
+                                <div>
+                                    <h4 class="font-semibold text-xl mb-2">Consumidores</h4>
+                                    <p class="text-gray-600">Alimentos mais nutritivos, livres de resíduos tóxicos e com sabor autêntico.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-[#f0e6d2] p-10 rounded-3xl flex items-center">
+                        <div>
+                            <blockquote class="text-2xl italic leading-relaxed">
+                                "A sustentabilidade não é uma opção, é a única forma de garantir o futuro da nossa alimentação."
+                            </blockquote>
+                            <p class="mt-8 font-medium">— Dr. Ana Mendes, Engenheira Agrônoma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- GALERIA / IMPACTO -->
+        <section class="py-20 bg-[#f8f4ed]">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Impacto Real</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <img src="https://picsum.photos/id/1018/600/400" alt="Plantação diversificada em sistema agroflorestal" 
+                         class="rounded-3xl w-full h-64 object-cover">
+                    <img src="https://picsum.photos/id/133/600/400" alt="Agricultor familiar colhendo produtos orgânicos" 
+                         class="rounded-3xl w-full h-64 object-cover">
+                    <img src="https://picsum.photos/id/201/600/400" alt="Sistema de captação de água da chuva" 
+                         class="rounded-3xl w-full h-64 object-cover">
+                    <img src="https://picsum.photos/id/251/600/400" alt="Solo saudável com cobertura vegetal" 
+                         class="rounded-3xl w-full h-64 object-cover">
+                </div>
+            </div>
+        </section>
+    
+        <!-- CONTATO -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="max-w-2xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6">Junte-se ao movimento</h2>
+                <p class="mb-10 text-lg">Quer saber mais ou participar de nossos projetos?</p>
+                
+                <form id="contactForm" class="space-y-6">
+                    <input type="text" placeholder="Seu nome" required
+                           class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:border-[#4a7043] outline-none">
+                    
+                    <input type="email" placeholder="Seu e-mail" required
+                           class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:border-[#4a7043] outline-none">
+                    
+                    <textarea placeholder="Sua mensagem..." rows="5" required
+                              class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:border-[#4a7043] outline-none resize-none"></textarea>
+                    
+                    <button type="submit"
+                            class="w-full bg-[#4a7043] text-white py-5 rounded-2xl font-semibold text-lg hover:bg-[#3a5a36] transition-colors">
+                        Enviar mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+    
+        <!-- FOOTER -->
+        <footer class="bg-[#3f3f3f] text-white py-16">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-9 h-9 bg-[#8a9a5b] rounded-2xl flex items-center justify-center text-2xl">🌱</div>
+                        <span class="text-2xl font-bold">AgroSustentável</span>
+                    </div>
+                    <p class="text-gray-400">Educando, inspirando e transformando o campo.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Práticas Sustentáveis</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cursos e Capacitação</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <p class="text-gray-400">contato@agrosustentavel.org</p>
+                    <p class="text-gray-400 mt-6 text-sm">© 2026 AgroSustentável. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+            // Tailwind script já incluso via CDN
+            
+            function toggleMenu() {
+                const menu = document.getElementById('mobileMenu');
+                menu.classList.toggle('hidden');
+            }
+            
+            // Formulário fake
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Mensagem enviada com sucesso! (Simulação)');
+                this.reset();
+            });
+            
+            // Scroll suave
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+            
+            // Acessibilidade extra: skip to content (opcional)
+            console.log('%cSite AgroSustentável carregado com foco em usabilidade e acessibilidade.', 'color: #4a7043; font-weight: bold');
+        </script>
+    </body>
+    </html>
+</body>
+</html>
